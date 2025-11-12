@@ -215,8 +215,6 @@ graph TB
 }
 ```
 
----
-
 ## Scalability Discussion
 
 **Current Prototype:** 3 nodes, ~100 req/s, full replication
@@ -231,3 +229,33 @@ graph TB
 **Bottlenecks:** Leader node bandwidth, gossip convergence time, cross-region latency
 
 **Solutions:** Multi-Paxos for batch commits, delta-based state sync, hierarchical gossip topology
+
+## Technology Stack
+
+### Frontend
+
+**React.js** - Single-page application for the canvas interface
+
+- WebSocket client for real-time pixel updates
+- Canvas rendering using HTML5 Canvas API or React component library
+- HTTP client (fetch/axios) for initial data loading and pixel placement
+
+### Backend
+
+**Python 3** - Server nodes implementation
+
+- **Flask** - HTTP REST API endpoints
+- **Flask-SocketIO** or **websockets** - WebSocket server for real-time updates
+- **socket** (built-in) - TCP peer-to-peer communication between nodes
+- **json** - Message serialization
+- **threading** - Concurrent handling of client connections and peer communication
+
+### Communication Protocols
+
+- **Client ↔ Server:** HTTP (REST) + WebSocket
+- **Server ↔ Server:** TCP sockets with JSON messages
+
+### Deployment
+
+- **Development:** Local machines (localhost with different ports) or Docker-compose?
+- **Production:** University svm servers (svm-11.cs.helsinki.fi, svm-11-2, svm-11-3)
