@@ -259,3 +259,4 @@ graph TB
 
 - **Development:** Local machines (localhost with different ports) or Docker-compose?
 - **Production:** University svm servers (svm-11.cs.helsinki.fi, svm-11-2, svm-11-3)
+- **Load Balancer:** Nginx reverse proxy for distributing client requests across nodesRetry
