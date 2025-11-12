@@ -3,6 +3,7 @@
 ## Team Members
 
 - Viljami Ranta
+- Antti Ollikkala
 
 ## Project Description:
 
