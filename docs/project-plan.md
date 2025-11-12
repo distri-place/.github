@@ -45,9 +45,7 @@ graph TB
 
 ### Canvas Partitioning
 
-- **Prototype:** Full replication - each node stores complete 100×100 canvas
-- **Large-scale:** Consistent hashing partitions 10,000×10,000 canvas into shards (1000×1000 each)
-- Each shard replicated 3× across different nodes
+- Full replication - each node stores complete 100×100 canvas
 
 ### Consistency & Synchronization
 
@@ -94,8 +92,6 @@ graph TB
 - Participate in gossip protocol for state convergence
 
 **Prototype Setup:** 3 nodes, one elected as leader, all can accept client requests.
-
-**Large-scale:** Regional clusters (3-9 nodes each), one leader per region, cross-region gossip.
 
 ## Message Protocol
 
@@ -224,8 +220,6 @@ graph TB
 ## Scalability Discussion
 
 **Current Prototype:** 3 nodes, ~100 req/s, full replication
-
-**Large-Scale Target (1000+ nodes, 1M+ concurrent users):**
 
 - **Sharding:** Canvas partitioned into 100 shards (1000×1000 pixels each)
 - **Replication:** Each shard stored on 3 nodes for fault tolerance
