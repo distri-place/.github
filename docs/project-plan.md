@@ -103,10 +103,9 @@ graph TB
 
 ### Client ↔ Server (Websocket and HTTP/JSON)
 
-**Place Pixel:**
+- Place a pixel - POST /pixel
 
 ```json
-POST /pixel
 {
   "x": 50,
   "y": 30,
@@ -114,18 +113,16 @@ POST /pixel
 }
 ```
 
-**Get Canvas:**
+- Get the canvas - GET /canvas
 
 ```json
-GET /canvas
-Response: {
+{
   "pixels": {"50,30": "#FF5733", ...},
   "version": [12, 8, 15]
 }
 ```
 
-**Real-time Pixel Update (WebSocket):**
-
+- Real-time Pixel Update (WebSocket)
 
 ### Server ↔ Server (TCP/JSON)
 
