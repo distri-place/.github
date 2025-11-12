@@ -2,8 +2,8 @@
 
 ## Team Members
 
-- Viljami Ranta
 - Antti Ollikkala
+- [Viljami Ranta](https://github.com/3nd3r1)
 
 ## Project Description:
 
