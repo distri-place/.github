@@ -4,6 +4,8 @@
 
 - Antti Ollikkala
 - [Viljami Ranta](https://github.com/3nd3r1)
+- Ilari Heikkinen
+- Joni Pesonen
 
 ## Project Description:
 
