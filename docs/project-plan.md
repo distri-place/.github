@@ -101,7 +101,7 @@ graph TB
 
 ## Message Protocol
 
-### Client ↔ Server (HTTP/JSON)
+### Client ↔ Server (Websocket and HTTP/JSON)
 
 **Place Pixel:**
 
@@ -123,6 +123,9 @@ Response: {
   "version": [12, 8, 15]
 }
 ```
+
+**Real-time Pixel Update (WebSocket):**
+
 
 ### Server ↔ Server (TCP/JSON)
 
