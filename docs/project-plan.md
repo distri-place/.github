@@ -22,28 +22,23 @@ graph TB
     end
 
     subgraph "Server Cluster"
+        LB[Load Balancer]
         N1[Node 1 - Leader]
         N2[Node 2 - Follower]
         N3[Node 3 - Follower]
     end
 
-    subgraph "Data Layer"
-        S1[Canvas Replica 1]
-        S2[Canvas Replica 2]
-        S3[Canvas Replica 3]
-    end
+    C1 --> LB
+    C2 --> LB
+    C3 --> LB
 
-    C1 --> N1
-    C2 --> N2
-    C3 --> N3
+    LB --> N1
+    LB --> N2
+    LB --> N3
 
     N1 <--> N2
     N2 <--> N3
     N3 <--> N1
-
-    N1 --> S1
-    N2 --> S2
-    N3 --> S3
 ```
 
 ## Solution Techniques
