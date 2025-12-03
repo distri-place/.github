@@ -1,13 +1,11 @@
-This will be the final report
+This is the initial structure that can be changed to fit the final report requirements!!!
 
-# Final Report Title  
-_Project Name_  
-_Group Number / Course / Date_
+# Final report
 
 ---
 
-## **Cover Page**
-(Include project name, group members, course, date, etc.)
+## **Distri-place**
+_Group 7 / Distributed Systems Course / 15.12.2025_
 
 ---
 
@@ -40,7 +38,9 @@ _Group Number / Course / Date_
 ---
 
 # **1. Introduction**
-(Short introduction to the project and document.)
+This is the final report of our project Distri-place. Distri-place is a shared canvas app that allows users to distributedly work on the same graphical canvas to create works of art.
+
+In this report we will discuss the project design and implementation goals and technology from the lens of implementing a working distributed system. We go into the core functionality and give a detailed review of how key distributed system elements such as leader election, consistency and fault tolerance are implemented, what are the roles of different nodes in our system and much more.
 
 ---
 
