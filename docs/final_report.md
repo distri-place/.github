@@ -110,7 +110,7 @@ In this report we will discuss the project design and implementation goals and t
 
 ---
 
-# **8. Groupwork
+# **8. Groupwork**
 
 ---
 
