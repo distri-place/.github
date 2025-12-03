@@ -30,7 +30,7 @@ _Group 7 / Distributed Systems Course / 15.12.2025_
   - [6.4 Performance Improvements](#64-performance-improvements)  
 - [7. Key Enablers and Lessons Learned](#7-key-enablers-and-lessons-learned)  
 - [8. Team Contributions](#8-team-contributions)  
-- [9. Appendices](#9-appendices)  
+- [9. Appendices](#8-appendices)  
   - [A. Major Design Changes](#a-major-design-changes)  
   - [B. Code References](#b-code-references)  
   - [C. Additional Figures, Logs, or Data](#c-additional-figures-logs-or-data)
@@ -50,11 +50,13 @@ In this report we will discuss the project design and implementation goals and t
 - The project objective was to be a shared canvas that works seamlessly with multitude of users each working on the canvas in real time. The distributed aspects of the project that we mainly were focusing on were replication among multiple nodes, global synchronization and availability, so that the users are always able to connect to our system.
   
 **2.2 Core Features**
-- Distributed systems elements are mostly implemented via RAFT-algorithm. We concluded after our initial design that with RAFT the project gets the key features that we expect from the distributed system. Those were the consistency and global synchronization, consensus via leader election and fault tolerance in case of errors happening that might compromise the current leader.
+- Distributed systems elements are mostly implemented via RAFT-algorithm. We concluded after our initial design ([note in appendix](#8-appendices)) that with RAFT the project gets the key features that we expect from the distributed system. Those were the consistency and global synchronization, consensus via leader election and fault tolerance in case of errors happening that might compromise the current leader.
 
 - The core feature of our application for users is the ability to collaborate in coloring individual pixels of the canvas at the same time and seeing the canvas update in near real-time. Currently there is no limit to how often a user can color a pixel but in the original implementation (reddit.com/place) there are certain restrictions in place (time limit that user has to wait before being able to color again) to improve the user experience. Also for demo the size of our canvas is relatively small but in production environment our implementation could be scaled with small modifications to code to accommodate a much bigger canvas.
 
 **2.3 Potential Applications / Services Built on This Project**
+
+- As our application implements RAFT in a way that allows for strong consistency and availability and replication among nodes, there are a plethora of different possible uses for different kinds of applications. Some examples could be ........
 
 ---
 
@@ -112,4 +114,12 @@ In this report we will discuss the project design and implementation goals and t
 ---
 
 # **8. Appendices**
+
+## **Note - How our application implementation changed from the original plan**
+
+- In our original project design-plan we considered using bully algorithm for the consensus. Instead we decided to implement the RAFT algorithm as it included the core functionalities that we wanted from our distributed system.
+
+## Changes to our tech stack:
+
+- Initially we thought about using TypeScript and React in the Front-end and Flask in the Back-end. However we decided to create the front-end without dedicated framework and in the back-end we used FastAPI with Python and added gRPC for communication between nodes.
 
