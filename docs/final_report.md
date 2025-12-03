@@ -45,9 +45,14 @@ In this report we will discuss the project design and implementation goals and t
 ---
 
 # **2. Project Goals and Core Functionality**
-- **2.1 Project Objectives**  
-- **2.2 Core Features**  
-- **2.3 Potential Applications / Services Built on This Project**
+
+**2.1 Project Objectives**
+- The project objective was to be a shared canvas that works seamlessly with multitude of users each working on the canvas in real time. The distributed aspects of the project that we mainly were focusing on were replication among multiple nodes and availability, so that the users are always able to connect to our system.
+  
+**2.2 Core Features**
+- Distributed systems elements are mostly implemented via RAFT-algorithm. We concluded after our initial design that with RAFT the project gets the key features that we expect from the distributed system. Those were the consistency and global synchronization, consensus via leader election and fault tolerance in case of errors happening that might compromise the current leader.
+
+**2.3 Potential Applications / Services Built on This Project**
 
 ---
 
