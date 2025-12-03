@@ -47,10 +47,12 @@ In this report we will discuss the project design and implementation goals and t
 # **2. Project Goals and Core Functionality**
 
 **2.1 Project Objectives**
-- The project objective was to be a shared canvas that works seamlessly with multitude of users each working on the canvas in real time. The distributed aspects of the project that we mainly were focusing on were replication among multiple nodes and availability, so that the users are always able to connect to our system.
+- The project objective was to be a shared canvas that works seamlessly with multitude of users each working on the canvas in real time. The distributed aspects of the project that we mainly were focusing on were replication among multiple nodes, global synchronization and availability, so that the users are always able to connect to our system.
   
 **2.2 Core Features**
 - Distributed systems elements are mostly implemented via RAFT-algorithm. We concluded after our initial design that with RAFT the project gets the key features that we expect from the distributed system. Those were the consistency and global synchronization, consensus via leader election and fault tolerance in case of errors happening that might compromise the current leader.
+
+- The core feature of our application for users is the ability to collaborate in coloring individual pixels of the canvas at the same time and seeing the canvas update in near real-time. Currently there is no limit to how often a user can color a pixel but in the original implementation (reddit.com/place) there are certain restrictions in place (time limit that user has to wait before being able to color again) to improve the user experience. Also for demo the size of our canvas is relatively small but in production environment our implementation could be scaled with small modifications to code to accommodate a much bigger canvas.
 
 **2.3 Potential Applications / Services Built on This Project**
 
