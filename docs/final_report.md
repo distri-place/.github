@@ -53,6 +53,9 @@ The core feature of our application for users is the ability to collaborate in c
 
 - Viljami will fill
 
+- reading from followers
+- writes only to leader
+
 ## 3.1 System Architecture
 
 - Overview diagram
